@@ -32,6 +32,10 @@ namespace intaktika
             var login = textBoxLogin.Text;
             var password = textBoxPassword.Text;
 
+            if (issetUser())
+            {
+                return;
+            }
             string query = $"inser into users(login,password,role) values('{login}','{password}',2)";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
@@ -49,6 +53,29 @@ namespace intaktika
             }
 
             dataBase.closeConnection();
+        }
+
+        private Boolean issetUser()
+        {
+            var login = textBoxLogin.Text;
+            var password = textBoxPassword.Text;
+
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable table = new DataTable();
+
+            string query = $"select id, login, password from users where login = '{login}'";
+
+            SqlCommand command = new SqlCommand(query, dataBase.getConnection());
+
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+            {
+                MessageBox.Show("Пользователь с таким логином уже существует!", "Ошибка!");
+                return true;
+            }
+            else return false;
         }
     }
 }
