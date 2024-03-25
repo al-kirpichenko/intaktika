@@ -146,10 +146,13 @@
             // 
             // dataGridViewBids
             // 
+            this.dataGridViewBids.AllowUserToAddRows = false;
+            this.dataGridViewBids.AllowUserToDeleteRows = false;
             this.dataGridViewBids.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewBids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBids.Location = new System.Drawing.Point(12, 134);
             this.dataGridViewBids.Name = "dataGridViewBids";
+            this.dataGridViewBids.ReadOnly = true;
             this.dataGridViewBids.Size = new System.Drawing.Size(879, 447);
             this.dataGridViewBids.TabIndex = 11;
             // 
