@@ -92,6 +92,7 @@
             this.Controls.Add(this.labelLogin);
             this.Name = "Login";
             this.Text = "Вход";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

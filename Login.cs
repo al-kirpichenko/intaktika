@@ -20,13 +20,6 @@ namespace intaktika
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-            textBoxPassword.PasswordChar = '*';
-            textBoxLogin.MaxLength = 50;
-            textBoxPassword.MaxLength = 50;
-        }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             var login = textBoxLogin.Text;
@@ -50,6 +43,14 @@ namespace intaktika
                 formMain.ShowDialog();
             } else
                 MessageBox.Show("Пользователь не найден!", "Пользователь не существует!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            textBoxPassword.PasswordChar = '*';
+            textBoxLogin.MaxLength = 50;
+            textBoxPassword.MaxLength = 50;
         }
     }
 }

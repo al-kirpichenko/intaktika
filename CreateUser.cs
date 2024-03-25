@@ -16,5 +16,10 @@ namespace intaktika
         {
             InitializeComponent();
         }
+
+        private void CreateUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

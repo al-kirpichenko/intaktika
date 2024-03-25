@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "CreateUser";
             this.Text = "Создать пользователя";
+            this.Load += new System.EventHandler(this.CreateUser_Load);
             this.ResumeLayout(false);
 
         }
