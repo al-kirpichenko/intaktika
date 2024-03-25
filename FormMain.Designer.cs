@@ -40,10 +40,12 @@
             this.labelPages = new System.Windows.Forms.Label();
             this.pictureBoxFilters = new System.Windows.Forms.PictureBox();
             this.dataGridViewBids = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             buttonAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAdmin
@@ -58,7 +60,7 @@
             // 
             // buttonCreateBid
             // 
-            this.buttonCreateBid.Location = new System.Drawing.Point(752, 12);
+            this.buttonCreateBid.Location = new System.Drawing.Point(807, 13);
             this.buttonCreateBid.Name = "buttonCreateBid";
             this.buttonCreateBid.Size = new System.Drawing.Size(139, 38);
             this.buttonCreateBid.TabIndex = 1;
@@ -71,7 +73,7 @@
             this.textBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBoxSearch.Location = new System.Drawing.Point(12, 104);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(377, 23);
+            this.textBoxSearch.Size = new System.Drawing.Size(274, 23);
             this.textBoxSearch.TabIndex = 2;
             // 
             // labelSearch
@@ -87,7 +89,7 @@
             // 
             this.pictureBoxSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxSearch.BackgroundImage")));
             this.pictureBoxSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxSearch.Location = new System.Drawing.Point(395, 104);
+            this.pictureBoxSearch.Location = new System.Drawing.Point(292, 104);
             this.pictureBoxSearch.Name = "pictureBoxSearch";
             this.pictureBoxSearch.Size = new System.Drawing.Size(23, 23);
             this.pictureBoxSearch.TabIndex = 4;
@@ -96,7 +98,7 @@
             // labelSort
             // 
             this.labelSort.AutoSize = true;
-            this.labelSort.Location = new System.Drawing.Point(460, 85);
+            this.labelSort.Location = new System.Drawing.Point(491, 86);
             this.labelSort.Name = "labelSort";
             this.labelSort.Size = new System.Drawing.Size(90, 13);
             this.labelSort.TabIndex = 6;
@@ -106,7 +108,7 @@
             // 
             this.comboBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Location = new System.Drawing.Point(459, 103);
+            this.comboBoxSort.Location = new System.Drawing.Point(490, 104);
             this.comboBoxSort.Name = "comboBoxSort";
             this.comboBoxSort.Size = new System.Drawing.Size(198, 24);
             this.comboBoxSort.TabIndex = 7;
@@ -115,7 +117,7 @@
             // 
             this.comboBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboBoxPages.FormattingEnabled = true;
-            this.comboBoxPages.Location = new System.Drawing.Point(665, 103);
+            this.comboBoxPages.Location = new System.Drawing.Point(693, 104);
             this.comboBoxPages.Name = "comboBoxPages";
             this.comboBoxPages.Size = new System.Drawing.Size(198, 24);
             this.comboBoxPages.TabIndex = 9;
@@ -123,7 +125,7 @@
             // labelPages
             // 
             this.labelPages.AutoSize = true;
-            this.labelPages.Location = new System.Drawing.Point(662, 85);
+            this.labelPages.Location = new System.Drawing.Point(692, 86);
             this.labelPages.Name = "labelPages";
             this.labelPages.Size = new System.Drawing.Size(114, 13);
             this.labelPages.TabIndex = 8;
@@ -133,7 +135,7 @@
             // 
             this.pictureBoxFilters.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxFilters.BackgroundImage")));
             this.pictureBoxFilters.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxFilters.Location = new System.Drawing.Point(869, 104);
+            this.pictureBoxFilters.Location = new System.Drawing.Point(321, 104);
             this.pictureBoxFilters.Name = "pictureBoxFilters";
             this.pictureBoxFilters.Size = new System.Drawing.Size(23, 23);
             this.pictureBoxFilters.TabIndex = 10;
@@ -148,11 +150,22 @@
             this.dataGridViewBids.Size = new System.Drawing.Size(879, 447);
             this.dataGridViewBids.TabIndex = 11;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(349, 104);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 625);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewBids);
             this.Controls.Add(this.pictureBoxFilters);
             this.Controls.Add(this.comboBoxPages);
@@ -170,6 +183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +201,7 @@
         private System.Windows.Forms.Label labelPages;
         private System.Windows.Forms.PictureBox pictureBoxFilters;
         private System.Windows.Forms.DataGridView dataGridViewBids;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
