@@ -43,6 +43,12 @@ namespace intaktika
                 MessageBox.Show("Пользователь добавлен!", "Успешно!");
                 this.Close();
             }
+            else 
+            {
+                MessageBox.Show("Произошла ошибка!", "Ошибка!");
+            }
+
+            dataBase.closeConnection();
         }
     }
 }
