@@ -41,7 +41,7 @@ namespace intaktika
             if(command.ExecuteNonQuery() == 1 ) 
             {
                 MessageBox.Show("Пользователь добавлен!", "Успешно!");
-
+                this.Close();
             }
         }
     }
