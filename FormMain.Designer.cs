@@ -51,6 +51,7 @@
             // buttonAdmin
             // 
             buttonAdmin.CausesValidation = false;
+            buttonAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonAdmin.Location = new System.Drawing.Point(10, 12);
             buttonAdmin.Name = "buttonAdmin";
             buttonAdmin.Size = new System.Drawing.Size(142, 38);
@@ -60,12 +61,14 @@
             // 
             // buttonCreateBid
             // 
-            this.buttonCreateBid.Location = new System.Drawing.Point(807, 13);
+            this.buttonCreateBid.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonCreateBid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCreateBid.Location = new System.Drawing.Point(752, 12);
             this.buttonCreateBid.Name = "buttonCreateBid";
             this.buttonCreateBid.Size = new System.Drawing.Size(139, 38);
             this.buttonCreateBid.TabIndex = 1;
             this.buttonCreateBid.Text = "Создать заявку";
-            this.buttonCreateBid.UseVisualStyleBackColor = true;
+            this.buttonCreateBid.UseVisualStyleBackColor = false;
             // 
             // textBoxSearch
             // 
@@ -98,7 +101,7 @@
             // labelSort
             // 
             this.labelSort.AutoSize = true;
-            this.labelSort.Location = new System.Drawing.Point(491, 86);
+            this.labelSort.Location = new System.Drawing.Point(489, 86);
             this.labelSort.Name = "labelSort";
             this.labelSort.Size = new System.Drawing.Size(90, 13);
             this.labelSort.TabIndex = 6;
