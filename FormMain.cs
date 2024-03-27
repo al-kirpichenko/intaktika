@@ -29,18 +29,25 @@ namespace intaktika
         public FormMain()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void CreateColumns()
         {
-            dataGridViewBids.Columns.Add("number", "№ Заявки");
+            DataGridViewButtonColumn buttonEdit = new DataGridViewButtonColumn();
+            buttonEdit.HeaderText = "Действие";
+            buttonEdit.Text = "Изменить";
+            buttonEdit.UseColumnTextForButtonValue = true;
+
+            dataGridViewBids.Columns.Add("id", "№ Заявки");
             dataGridViewBids.Columns.Add("client", "Клиент");
             dataGridViewBids.Columns.Add("description", "Описание");
             dataGridViewBids.Columns.Add("executor", "Исполнитель");
             dataGridViewBids.Columns.Add("status", "Статус");
             dataGridViewBids.Columns.Add("date_open", "Дата открытия");
             dataGridViewBids.Columns.Add("date_closed", "Дата закрытия");
-            
+            dataGridViewBids.Columns.Add(buttonEdit);
+
         }
 
         private void ReadSingleRow(DataGridView dgw, IDataRecord record)
@@ -48,7 +55,7 @@ namespace intaktika
             DateTime? dateClosed = record.IsDBNull(6) ? (DateTime?)null : record.GetDateTime(6);
 
             dgw.Rows.Add(
-                record.GetString(0),
+                record.GetInt32(0),
                 record.GetString(1),
                 record.GetString(2),
                 record.GetString(3),
@@ -63,7 +70,7 @@ namespace intaktika
         {
             dgw.Rows.Clear();
 
-            string query = $"SELECT Bids.number, Clients.name, Bids.description, Staffs.name, Statuses.status, Bids.date_open, Bids.date_closed FROM Statuses INNER JOIN Clients INNER JOIN Staffs INNER JOIN Bids ON Staffs.id = Bids.executor ON Clients.id = Bids.client ON Statuses.id = Bids.status";
+            string query = $"SELECT Bids.id, Clients.name, Bids.description, Staffs.name, Statuses.status, Bids.date_open, Bids.date_closed FROM Statuses INNER JOIN Clients INNER JOIN Staffs INNER JOIN Bids ON Staffs.id = Bids.executor ON Clients.id = Bids.client ON Statuses.id = Bids.status";
 
             SqlCommand command = new SqlCommand(query, dataBase.getConnection());
 
@@ -83,5 +90,6 @@ namespace intaktika
             CreateColumns();
             RefreshDataGrid(dataGridViewBids);
         }
+
     }
 }

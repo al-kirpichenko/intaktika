@@ -34,18 +34,16 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
             this.pictureBoxSearch = new System.Windows.Forms.PictureBox();
-            this.labelSort = new System.Windows.Forms.Label();
-            this.comboBoxSort = new System.Windows.Forms.ComboBox();
             this.comboBoxPages = new System.Windows.Forms.ComboBox();
             this.labelPages = new System.Windows.Forms.Label();
             this.pictureBoxFilters = new System.Windows.Forms.PictureBox();
-            this.dataGridViewBids = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewBids = new System.Windows.Forms.DataGridView();
             buttonAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAdmin
@@ -98,24 +96,6 @@
             this.pictureBoxSearch.TabIndex = 4;
             this.pictureBoxSearch.TabStop = false;
             // 
-            // labelSort
-            // 
-            this.labelSort.AutoSize = true;
-            this.labelSort.Location = new System.Drawing.Point(489, 86);
-            this.labelSort.Name = "labelSort";
-            this.labelSort.Size = new System.Drawing.Size(90, 13);
-            this.labelSort.TabIndex = 6;
-            this.labelSort.Text = "Сортировать по:";
-            // 
-            // comboBoxSort
-            // 
-            this.comboBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Location = new System.Drawing.Point(490, 104);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(198, 24);
-            this.comboBoxSort.TabIndex = 7;
-            // 
             // comboBoxPages
             // 
             this.comboBoxPages.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -144,18 +124,6 @@
             this.pictureBoxFilters.TabIndex = 10;
             this.pictureBoxFilters.TabStop = false;
             // 
-            // dataGridViewBids
-            // 
-            this.dataGridViewBids.AllowUserToAddRows = false;
-            this.dataGridViewBids.AllowUserToDeleteRows = false;
-            this.dataGridViewBids.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewBids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBids.Location = new System.Drawing.Point(12, 134);
-            this.dataGridViewBids.Name = "dataGridViewBids";
-            this.dataGridViewBids.ReadOnly = true;
-            this.dataGridViewBids.Size = new System.Drawing.Size(879, 447);
-            this.dataGridViewBids.TabIndex = 11;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -166,30 +134,40 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // dataGridViewBids
+            // 
+            this.dataGridViewBids.AllowUserToAddRows = false;
+            this.dataGridViewBids.AllowUserToDeleteRows = false;
+            this.dataGridViewBids.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewBids.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBids.Location = new System.Drawing.Point(12, 134);
+            this.dataGridViewBids.Name = "dataGridViewBids";
+            this.dataGridViewBids.ReadOnly = true;
+            this.dataGridViewBids.Size = new System.Drawing.Size(879, 462);
+            this.dataGridViewBids.TabIndex = 11;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 625);
+            this.ClientSize = new System.Drawing.Size(903, 820);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewBids);
             this.Controls.Add(this.pictureBoxFilters);
             this.Controls.Add(this.comboBoxPages);
             this.Controls.Add(this.labelPages);
-            this.Controls.Add(this.comboBoxSort);
-            this.Controls.Add(this.labelSort);
             this.Controls.Add(this.pictureBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.buttonCreateBid);
             this.Controls.Add(buttonAdmin);
+            this.Controls.Add(this.buttonCreateBid);
             this.Name = "FormMain";
             this.Text = "ИС \"Интактика\"";
             this.Load += new System.EventHandler(this.FormMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBids)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,13 +179,11 @@
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label labelSearch;
         private System.Windows.Forms.PictureBox pictureBoxSearch;
-        private System.Windows.Forms.Label labelSort;
-        private System.Windows.Forms.ComboBox comboBoxSort;
         private System.Windows.Forms.ComboBox comboBoxPages;
         private System.Windows.Forms.Label labelPages;
         private System.Windows.Forms.PictureBox pictureBoxFilters;
-        private System.Windows.Forms.DataGridView dataGridViewBids;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridViewBids;
     }
 }
 

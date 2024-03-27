@@ -37,7 +37,6 @@ namespace intaktika
 
             if (table.Rows.Count > 0)
             {
-                MessageBox.Show("Вход выполнен!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FormMain formMain = new FormMain();
                 this.Hide();
                 formMain.ShowDialog();
