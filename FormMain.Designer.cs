@@ -67,6 +67,7 @@
             this.buttonCreateBid.TabIndex = 1;
             this.buttonCreateBid.Text = "Создать заявку";
             this.buttonCreateBid.UseVisualStyleBackColor = false;
+            this.buttonCreateBid.Click += new System.EventHandler(this.buttonCreateBid_Click);
             // 
             // textBoxSearch
             // 

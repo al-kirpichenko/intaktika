@@ -91,5 +91,10 @@ namespace intaktika
             RefreshDataGrid(dataGridViewBids);
         }
 
+        private void buttonCreateBid_Click(object sender, EventArgs e)
+        {
+            AddBid addBid = new AddBid();
+            addBid.Show();
+        }
     }
 }
