@@ -59,6 +59,12 @@
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase.cs" />
+    <Compile Include="EditBid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditBid.Designer.cs">
+      <DependentUpon>EditBid.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditBid.resx">
+      <DependentUpon>EditBid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
