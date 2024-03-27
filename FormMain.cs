@@ -38,6 +38,7 @@ namespace intaktika
             buttonEdit.HeaderText = "Действие";
             buttonEdit.Text = "Изменить";
             buttonEdit.UseColumnTextForButtonValue = true;
+           
 
             dataGridViewBids.Columns.Add("id", "№ Заявки");
             dataGridViewBids.Columns.Add("client", "Клиент");
@@ -95,6 +96,23 @@ namespace intaktika
         {
             AddBid addBid = new AddBid();
             addBid.Show();
+        }
+
+        private void dataGridViewBids_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Проверяем, что событие вызвано кликом на ячейке типа кнопки
+            if (dataGridViewBids.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                // Обработка нажатия на кнопку в строке e.RowIndex
+                EditBid editBid = new EditBid();
+                editBid.Show();
+            }
+        }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            CreateUser createUser = new CreateUser();
+            createUser.Show();
         }
     }
 }

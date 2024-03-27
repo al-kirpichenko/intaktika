@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.Button buttonAdmin;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.Button button1;
             this.buttonCreateBid = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
@@ -40,6 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewBids = new System.Windows.Forms.DataGridView();
             buttonAdmin = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,8 +56,9 @@
             buttonAdmin.Name = "buttonAdmin";
             buttonAdmin.Size = new System.Drawing.Size(142, 38);
             buttonAdmin.TabIndex = 0;
-            buttonAdmin.Text = "Администрирование";
+            buttonAdmin.Text = "Добавить пользователя";
             buttonAdmin.UseVisualStyleBackColor = true;
+            buttonAdmin.Click += new System.EventHandler(this.buttonAdmin_Click);
             // 
             // buttonCreateBid
             // 
@@ -146,12 +149,25 @@
             this.dataGridViewBids.ReadOnly = true;
             this.dataGridViewBids.Size = new System.Drawing.Size(879, 462);
             this.dataGridViewBids.TabIndex = 11;
+            this.dataGridViewBids.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBids_CellContentClick);
+            // 
+            // button1
+            // 
+            button1.CausesValidation = false;
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            button1.Location = new System.Drawing.Point(158, 12);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(142, 38);
+            button1.TabIndex = 13;
+            button1.Text = "Добавить клиента";
+            button1.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 820);
+            this.Controls.Add(button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewBids);
             this.Controls.Add(this.pictureBoxFilters);
