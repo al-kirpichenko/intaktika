@@ -175,6 +175,7 @@
             buttonReports.TabIndex = 14;
             buttonReports.Text = "Отчеты";
             buttonReports.UseVisualStyleBackColor = true;
+            buttonReports.Click += new System.EventHandler(this.buttonReports_Click);
             // 
             // FormMain
             // 

@@ -120,5 +120,11 @@ namespace intaktika
             AddClient addClient = new AddClient();
             addClient.Show();
         }
+
+        private void buttonReports_Click(object sender, EventArgs e)
+        {
+            CreateReport createReport = new CreateReport(); 
+            createReport.Show();
+        }
     }
 }
