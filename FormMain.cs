@@ -114,5 +114,11 @@ namespace intaktika
             CreateUser createUser = new CreateUser();
             createUser.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddClient addClient = new AddClient();
+            addClient.Show();
+        }
     }
 }

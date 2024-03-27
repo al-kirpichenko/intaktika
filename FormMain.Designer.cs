@@ -31,6 +31,7 @@
             System.Windows.Forms.Button buttonAdmin;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.Button button1;
+            System.Windows.Forms.Button buttonReports;
             this.buttonCreateBid = new System.Windows.Forms.Button();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.labelSearch = new System.Windows.Forms.Label();
@@ -42,6 +43,7 @@
             this.dataGridViewBids = new System.Windows.Forms.DataGridView();
             buttonAdmin = new System.Windows.Forms.Button();
             button1 = new System.Windows.Forms.Button();
+            buttonReports = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilters)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,12 +163,25 @@
             button1.TabIndex = 13;
             button1.Text = "Добавить клиента";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonReports
+            // 
+            buttonReports.CausesValidation = false;
+            buttonReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            buttonReports.Location = new System.Drawing.Point(306, 12);
+            buttonReports.Name = "buttonReports";
+            buttonReports.Size = new System.Drawing.Size(142, 38);
+            buttonReports.TabIndex = 14;
+            buttonReports.Text = "Отчеты";
+            buttonReports.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 820);
+            this.Controls.Add(buttonReports);
             this.Controls.Add(button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridViewBids);
